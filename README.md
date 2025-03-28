@@ -42,7 +42,7 @@ Install requirements:
 
 ```bash
 sudo apt install xdotool
-pip install pygame
+pip install pygame ```
 
 
 ---
@@ -50,5 +50,5 @@ pip install pygame
 ## 🚀 Run It
 
 ```bash
-python lockkeyreactionmain.py
+python lockkeyreactionmain.py```
 
