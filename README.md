@@ -63,5 +63,6 @@ pip install pygame
 python lockkeyreactionmain.py
 ```
 
-
+## To be added
+Adjust the logic, make it so that the reactiontime balances around players ability to hit keys, too slow and game will slow down and too fast and game will pick up the pace. And depending on the players ability to hit correct key in time will give scores and game will have different durations games and highscore list.
 
