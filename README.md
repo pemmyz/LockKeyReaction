@@ -47,11 +47,7 @@ pip install pygame
 
 ---
 
-more text
-
----
-
 ## 🚀 Run It
 
 ```bash
-python lockkeyreactionmain.py```
+python lockkeyreactionmain.py
