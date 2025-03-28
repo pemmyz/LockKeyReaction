@@ -66,3 +66,44 @@ python lockkeyreactionmain.py
 ## To be added
 Adjust the logic, make it so that the reactiontime balances around players ability to hit keys, too slow and game will slow down and too fast and game will pick up the pace. And depending on the players ability to hit correct key in time will give scores and game will have different durations games and highscore list. Adjust the game so it will work on other operating systems like Windows. Now there might be things coded that are not crossplatform.
 
+
+
+## 🧠 Game Logic Update Plan
+
+- The game will **adapt its reaction time** dynamically based on the player's key press performance:
+  - If the player consistently presses keys **too slowly**, the game will slow down to stay challenging but fair.
+  - If the player hits keys **very quickly and accurately**, the game will **speed up** to increase the difficulty.
+
+## 🎯 Scoring System
+
+- Score will be based on:
+  - Hitting the correct key in time.
+  - Reaction accuracy (how fast you hit the key after prompt).
+- Missed or incorrect keys will reduce the score or combo.
+
+## ⏱️ Game Duration & Variants
+
+- Multiple game duration options (e.g., 30s, 60s, endless mode).
+- The high score list will reflect top performances based on selected durations.
+
+## 🌐 Cross-Platform Compatibility
+
+- Adjustments will be made to ensure full support on **Windows**, **Linux**, and **macOS**.
+- Code will be refactored to remove or replace platform-specific functionality with **cross-platform alternatives**:
+  - Avoid hardcoded paths or OS-specific calls.
+  - Use standard Python libraries and OS-independent file handling where possible.
+
+## 💾 Highscore System
+
+- Persistent highscore list stored in a simple JSON or text file.
+- Optionally support per-duration leaderboards.
+
+## 🚧 TODO
+
+- [ ] Implement dynamic reaction time scaling.
+- [ ] Add scoring and combo system.
+- [ ] Build game duration options.
+- [ ] Implement cross-platform input handling.
+- [ ] Create and store highscore lists.
+
+Stay tuned for updates!
