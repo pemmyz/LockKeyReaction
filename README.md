@@ -33,3 +33,22 @@ Install requirements:
 ```bash
 sudo apt install xdotool
 pip install pygame
+
+
+
+## 📊 Stats Tracked
+
+- Fastest / Slowest / Average reaction time  
+- Median, Standard Deviation  
+- 25th and 75th Percentiles  
+- Missed prompts  
+- Accuracy & Prompt ratio  
+- Current and longest streaks  
+- Total game time & unpaused time  
+
+---
+
+## 🚀 Run It
+
+```bash
+python lockkeyreactionmain.py
