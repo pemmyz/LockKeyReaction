@@ -20,6 +20,17 @@ Originally designed for Linux using `xdotool` and `xset`, this version also incl
 
 ---
 
+
+## 📊 Stats Tracked
+
+- Fastest / Slowest / Average reaction time  
+- Median, Standard Deviation  
+- 25th and 75th Percentiles  
+- Missed prompts  
+- Accuracy & Prompt ratio  
+- Current and longest streaks  
+- Total game time & unpaused time  
+
 ## 🛠️ Requirements
 
 ### Linux:
@@ -42,12 +53,3 @@ pip install pygame
 ```bash
 python lockkeyreactionmain.py
 
-## 📊 Stats Tracked
-
-- Fastest / Slowest / Average reaction time  
-- Median, Standard Deviation  
-- 25th and 75th Percentiles  
-- Missed prompts  
-- Accuracy & Prompt ratio  
-- Current and longest streaks  
-- Total game time & unpaused time  
