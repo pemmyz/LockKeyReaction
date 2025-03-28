@@ -1,4 +1,3 @@
-# LockKeyReaction
 # 🔒 LockKeyReaction
 
 **LockKeyReaction** is a reflex-testing game that uses your keyboard’s lock LEDs (Caps Lock, Num Lock, Scroll Lock) as visual prompts! Hit the correct key in time, and the game speeds up — miss it, and you'll have to keep up!
