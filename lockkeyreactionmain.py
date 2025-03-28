@@ -4,7 +4,7 @@ import random
 import time
 import statistics
 
-#add status lights to pygame window, so windows can play too
+# Add status lights to pygame window, so windows can play too
 
 # Global variable to store the LED mask output string.
 led_mask_output = "N/A"
@@ -24,6 +24,7 @@ pygame.display.set_caption("LED Reaction Game with Stats")
 # Define colors and font
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
+RED = (255, 0, 0)
 font = pygame.font.Font(None, 24)
 
 ###########################
@@ -339,6 +340,25 @@ while running:
     overall_time = int(time.time() - app_start_time)  # Overall time always running from app start.
     active_time_display = int(active_game_time)
 
+    # Clear the screen.
+    screen.fill(WHITE)
+
+    # Draw LED circles in the lower portion of the screen.
+    # These circles represent the three LEDs: left = "Num_Lock", middle = "Caps_Lock", right = "Scroll_Lock".
+    led_area_y = int(0.75 * HEIGHT)  # center Y position (e.g., 450 when HEIGHT = 600)
+    led_positions = {
+        "Num_Lock": (WIDTH // 6, led_area_y),
+        "Caps_Lock": (WIDTH // 2, led_area_y),
+        "Scroll_Lock": (5 * WIDTH // 6, led_area_y)
+    }
+    led_radius = 100
+    for led, pos in led_positions.items():
+        # Fill red if this LED is currently active; otherwise fill white.
+        fill_color = RED if current_led == led else WHITE
+        pygame.draw.circle(screen, fill_color, pos, led_radius)
+        pygame.draw.circle(screen, BLACK, pos, led_radius, 5)
+
+    # Prepare stats text lines.
     line1 = f"Total Key Presses: {led_total_presses} (Wrong: {led_wrong_presses})"
     line2 = f"Successful Presses: {led_correct_presses} | Accuracy: {get_led_accuracy()} | Prompts: {led_total_prompts} (Prompt Ratio: {get_led_prompt_ratio()})"
     line3 = f"Fastest: {get_led_fastest()} ms | Slowest: {get_led_slowest()} ms | Average: {get_led_average()} ms"
@@ -351,13 +371,14 @@ while running:
     line10 = f"Overall Game Time: {overall_time} s"
     line11 = f"LED Mask: {led_mask_output}"
 
-    screen.fill(WHITE)
+    # Draw stats text at the top of the screen.
     y = 10
     for line in [line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11]:
         surface = font.render(line, True, BLACK)
         screen.blit(surface, (10, y))
         y += 20
 
+    # If paused, display pause message; if active, display current LED prompt.
     if paused:
         pause_text = "Paina avaruusnäppäintä"
         pause_surface = font.render(pause_text, True, BLACK)
