@@ -34,7 +34,7 @@ Install requirements:
 sudo apt install xdotool
 pip install pygame
 
-
+---
 
 ## 📊 Stats Tracked
 
