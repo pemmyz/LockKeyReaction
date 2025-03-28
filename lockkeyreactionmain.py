@@ -233,10 +233,9 @@ while running:
     if not paused:
         active_game_time += dt
 
-    # Update LED mask observation every 1 second.
-    if time.time() - last_led_mask_update >= 1:
-        update_led_mask()
-        last_led_mask_update = time.time()
+
+    # Update LED mask on every loop iteration.
+    update_led_mask()
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
