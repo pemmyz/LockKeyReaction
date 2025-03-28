@@ -5,7 +5,11 @@
 Originally designed for Linux using `xdotool` and `xset`, this version also includes on-screen status lights so it should work on Windows (currently not supported) and non-LED setups too. ⌨️✨
 
 ---
+## Screenshots
 
+### Game
+![Game 1](screenshots/game_1.png)
+---
 ## 🧠 Idea Behind the Game
 
 This game started as a fun way to test reflexes using actual **keyboard LED lights**.
