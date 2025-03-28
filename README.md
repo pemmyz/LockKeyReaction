@@ -105,5 +105,6 @@ Adjust the logic, make it so that the reactiontime balances around players abili
 - [ ] Build game duration options.
 - [ ] Implement cross-platform input handling.
 - [ ] Create and store highscore lists.
+- [ ] Add multiple leds on at same time.
 
 Stay tuned for updates!
