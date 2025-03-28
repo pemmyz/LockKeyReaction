@@ -2,7 +2,7 @@
 
 **LockKeyReaction** is a reflex-testing game that uses your keyboard’s lock LEDs (Caps Lock, Num Lock, Scroll Lock) as visual prompts! Hit the correct key in time, and the game speeds up — miss it, and you'll have to keep up!
 
-Originally designed for Linux using `xdotool` and `xset`, this version also includes on-screen status lights so it works on Windows and non-LED setups too. ⌨️✨
+Originally designed for Linux using `xdotool` and `xset`, this version also includes on-screen status lights so it should work on Windows and non-LED setups too. ⌨️✨
 
 ---
 
