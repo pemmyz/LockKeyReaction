@@ -111,4 +111,21 @@ Adjust the logic, make it so that the reactiontime balances around players abili
 - [ ] Create and store highscore lists.
 - [ ] Add multiple leds on at same time.
 
+
+
+## 🤖 AI Assistance Disclaimer
+
+This game was created with the assistance of AI tools (e.g., ChatGPT) for various tasks such as:
+
+- Code suggestions and debugging  
+- Design ideas and architectural guidance  
+- Problem-solving and refactoring help  
+- Occasional motivational pep talks
+
+While AI provided helpful input during development, all decisions, edits, and final implementations were made by a human (yes, really).  
+Think of it as pair programming… with a very talkative robot.
+
+
 Stay tuned for updates!
+
+
