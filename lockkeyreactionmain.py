@@ -19,7 +19,7 @@ pygame.key.set_repeat(0)  # Disable key repeat
 # Set up display
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("LED Reaction Game with Stats")
+pygame.display.set_caption("LockKeyReaction")
 
 # Define colors and font
 WHITE = (255, 255, 255)
