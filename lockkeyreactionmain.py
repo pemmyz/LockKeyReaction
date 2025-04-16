@@ -11,7 +11,8 @@ led_mask_output = "N/A"
 app_start_time = time.time()
 
 # Global variable to toggle visual buttons.
-show_visual_buttons = True
+# Changed default value to False so that visual buttons are off when the game starts.
+show_visual_buttons = False
 
 # Initialize Pygame
 pygame.init()
