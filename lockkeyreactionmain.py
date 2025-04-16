@@ -4,13 +4,14 @@ import random
 import time
 import statistics
 
-# Add status lights to pygame window, so windows can play too
-
 # Global variable to store the LED mask output string.
 led_mask_output = "N/A"
 
 # Global variable for application start time; overall game time will be measured from this value.
 app_start_time = time.time()
+
+# Global variable to toggle visual buttons.
+show_visual_buttons = True
 
 # Initialize Pygame
 pygame.init()
@@ -233,7 +234,6 @@ while running:
     if not paused:
         active_game_time += dt
 
-
     # Update LED mask on every loop iteration.
     update_led_mask()
 
@@ -251,6 +251,11 @@ while running:
             if event.key in keys_down:
                 continue
             keys_down.add(event.key)
+
+            # Toggle visual buttons on or off when H is pressed.
+            if event.key == pygame.K_h:
+                show_visual_buttons = not show_visual_buttons
+                continue
 
             if event.key == pygame.K_r:
                 reset_game()
@@ -342,20 +347,21 @@ while running:
     # Clear the screen.
     screen.fill(WHITE)
 
-    # Draw LED circles in the lower portion of the screen.
-    # These circles represent the three LEDs: left = "Num_Lock", middle = "Caps_Lock", right = "Scroll_Lock".
-    led_area_y = int(0.75 * HEIGHT)  # center Y position (e.g., 450 when HEIGHT = 600)
-    led_positions = {
-        "Num_Lock": (WIDTH // 6, led_area_y),
-        "Caps_Lock": (WIDTH // 2, led_area_y),
-        "Scroll_Lock": (5 * WIDTH // 6, led_area_y)
-    }
-    led_radius = 100
-    for led, pos in led_positions.items():
-        # Fill red if this LED is currently active; otherwise fill white.
-        fill_color = RED if current_led == led else WHITE
-        pygame.draw.circle(screen, fill_color, pos, led_radius)
-        pygame.draw.circle(screen, BLACK, pos, led_radius, 5)
+    # Conditionally draw LED circles (visual buttons)
+    if show_visual_buttons:
+        # Draw LED circles in the lower portion of the screen.
+        led_area_y = int(0.75 * HEIGHT)  # center Y position (e.g., 450 when HEIGHT = 600)
+        led_positions = {
+            "Num_Lock": (WIDTH // 6, led_area_y),
+            "Caps_Lock": (WIDTH // 2, led_area_y),
+            "Scroll_Lock": (5 * WIDTH // 6, led_area_y)
+        }
+        led_radius = 100
+        for led, pos in led_positions.items():
+            # Fill red if this LED is currently active; otherwise fill white.
+            fill_color = RED if current_led == led else WHITE
+            pygame.draw.circle(screen, fill_color, pos, led_radius)
+            pygame.draw.circle(screen, BLACK, pos, led_radius, 5)
 
     # Prepare stats text lines.
     line1 = f"Total Key Presses: {led_total_presses} (Wrong: {led_wrong_presses})"
@@ -376,6 +382,12 @@ while running:
         surface = font.render(line, True, BLACK)
         screen.blit(surface, (10, y))
         y += 20
+
+    # Display hint for toggling visual buttons.
+    hint_text = "Press H to toggle visual buttons"
+    hint_surface = font.render(hint_text, True, BLACK)
+    # Position hint at the bottom left of the screen.
+    screen.blit(hint_surface, (10, HEIGHT - 30))
 
     # If paused, display pause message; if active, display current LED prompt.
     if paused:
