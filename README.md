@@ -46,7 +46,7 @@ I wasn’t the first person to come up with this idea — and the person I origi
 
 ## 🛠️ Requirements
 
-### Linux:
+### GNU/Linux:
 - Python 3
 - [Pygame](https://www.pygame.org/)
 - `xdotool`
