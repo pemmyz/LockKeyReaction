@@ -4,6 +4,10 @@
 
 Originally designed for GNU/Linux using `xdotool` and `xset`, this version also includes on-screen status lights so it should work on Windows (currently not supported) and non-LED setups too. ⌨️✨
 
+A javascript version of this (does not support lock keys): 
+js_lockkeyreaction
+Play it now: https://pemmyz.github.io/js_lockkeyreaction/
+
 ---
 ## Screenshots
 
